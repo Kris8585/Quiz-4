@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<div class="container-fluid border_cont ">
+    <div class="container ">
+
+        <div class="row">
+
+            <div class="col-4 margin_elements" *ngFor="let item of socials">
+
+                <a class="icon_class "><span class="{{item.iconClass}}"></span></a>
+
+                <h1>{{item.title}}</h1>
+                <p *ngIf="item.active">{{item.description}}</p>
+                <button class=" btn btn-primary button_class" *ngIf="item.active" (click)="item.active=!item.active"><span class="fa fa-angle-double-up"></span></button>
+                <button class=" btn btn-primary button_class" *ngIf="!item.active" (click)="item.active=!item.active"><span class="fa fa-angle-double-down"></span></button>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
